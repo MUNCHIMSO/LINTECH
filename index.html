@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chief Dr. Damian Odo Messiah N' Nsukka Foundation | Empowering Lives & Building Communities</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#FF4500',      /* Vibrant Orange-Red */
+                            redDark: '#D03700',
+                            black: '#0D0D0D',    /* Deep Black */
+                            darkGray: '#1A1A1A',
+                            gold: '#D4AF37',     /* Prestigious Gold Accent */
+                            light: '#F8F9FA'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS for specialized effects -->
+    <style>
+        /* Preloader CSS */
+        #preloader {
+            position: fixed;
+            inset: 0;
+            background-color: #0D0D0D;
+            z-index: 99999;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.6s ease-out, visibility 0.6s ease-out;
+        }
+
+        .loader-heart {
+            display: inline-block;
+            position: relative;
+            width: 80px;
+            height: 80px;
+            transform: rotate(45deg);
+            transform-origin: 40px 40px;
+        }
+        .loader-heart div {
+            top: 32px;
+            left: 32px;
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            background: #FF4500;
+            animation: loader-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+        .loader-heart div:after,
+        .loader-heart div:before {
+            content: " ";
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            background: #FF4500;
+            border-radius: 50%;
+        }
+        .loader-heart div:before {
+            top: -24px;
+            left: 0;
+        }
+        .loader-heart div:after {
+            top: 0;
+            left: -24px;
+        }
+        @keyframes loader-heart {
+            0% { transform: scale(0.95); }
+            5% { transform: scale(1.1); }
+            39% { transform: scale(0.85); }
+            45% { transform: scale(1); }
+            60% { transform: scale(0.95); }
+            100% { transform: scale(0.9); }
+        }
+
+        /* Glassmorphic elements */
+        .glass-dark {
+            background: rgba(13, 13, 13, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0D0D0D;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #FF4500;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D03700;
+        }
+    </style>
+</head>
+<body class="bg-brand-light text-gray-800 font-sans antialiased overflow-x-hidden selection:bg-brand-red selection:text-white">
+
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="loader-heart mb-6"><div></div></div>
+        <div class="text-center px-4">
+            <h2 class="text-white font-serif text-xl md:text-2xl font-bold tracking-wide">
+                Chief Dr. Damian Odo Messiah N' Nsukka
+            </h2>
+            <p class="text-brand-red text-sm tracking-widest uppercase font-semibold mt-1">Foundation</p>
+            <p class="text-gray-400 text-xs mt-3 italic">Empowering Humanity • Restoring Hope</p>
+        </div>
+    </div>
+
+    <!-- NAVIGATION BAR -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300" id="mainHeader">
+        <!-- Top Announcement Bar -->
+        <div class="bg-brand-black text-gray-300 text-xs py-2 px-4 border-b border-gray-800">
+            <div class="max-w-7xl mx-auto flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <span class="flex items-center gap-1">
+                        <i class="fa-solid fa-envelope text-brand-red">
+                        </i> info@messiahfoundation.org
+                    </span>
+                    <span class="hidden md:flex items-center gap-1">
+                        <i class="fa-solid fa-phone text-brand-red"></i> +234 (0) 800 6377 424
+                    </span>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <span class="text-brand-gold font-medium hidden sm:inline"><i class="fa-solid fa-heart mr-1"></i> "Service to Humanity is Service to God"</span>
+                    <div class="flex space-x-2 text-white">
+                        <a href="#" class="hover:text-brand-red transition"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="hover:text-brand-red transition"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="hover:text-brand-red transition"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="hover:text-brand-red transition"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navbar -->
+        <nav class="glass-dark border-b border-white/10 text-white transition-all duration-300" id="navbar">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-20">
+                    
+                    <!-- Logo / Founder Title -->
+                    <a href="#home" class="flex items-center gap-3 group">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-brand-red to-brand-gold p-0.5 flex items-center justify-center shadow-lg group-hover:scale-105 transition duration-300">
+                            <div class="w-full h-full bg-brand-black rounded-full flex items-center justify-center">
+                                <span class="font-serif font-bold text-lg text-brand-red">DM</span>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="block font-serif font-bold text-base sm:text-lg leading-tight tracking-wide text-white group-hover:text-brand-red transition">
+                                CHIEF DR. DAMIAN ODO
+                            </span>
+                            <span class="block text-xs font-semibold tracking-wider text-brand-gold">
+                                MESSIAH N' NSUKKA FOUNDATION
+                            </span>
+                        </div>
+                    </a>
+
+                    <!-- Desktop Nav Links -->
+                    <div class="hidden lg:flex items-center space-x-8 font-medium text-sm">
+                        <a href="#home" class="hover:text-brand-red transition py-1 border-b-2 border-brand-red text-brand-red">Home</a>
+                        <a href="#founder" class="hover:text-brand-red transition py-1 border-b-2 border-transparent">Founder's Bio</a>
+                        <a href="#pillars" class="hover:text-brand-red transition py-1 border-b-2 border-transparent">Core Pillars</a>
+                        <a href="#impact" class="hover:text-brand-red transition py-1 border-b-2 border-transparent">Impact & Gallery</a>
+                        <a href="#testimonials" class="hover:text-brand-red transition py-1 border-b-2 border-transparent">Stories</a>
+                        <a href="#contact" class="hover:text-brand-red transition py-1 border-b-2 border-transparent">Contact</a>
+                    </div>
+
+                    <!-- CTA Button -->
+                    <div class="hidden sm:flex items-center gap-4">
+                        <button onclick="openDonateModal()" class="bg-gradient-to-r from-brand-red to-red-600 hover:from-red-600 hover:to-brand-red text-white font-bold px-6 py-2.5 rounded-full shadow-lg hover:shadow-brand-red/30 transition duration-300 transform hover:-translate-y-0.5 flex items-center gap-2">
+                            <i class="fa-solid fa-hand-holding-heart"></i>
+                            <span>Donate Now</span>
+                        </button>
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <div class="lg:hidden flex items-center">
+                        <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="text-gray-300 hover:text-white focus:outline-none p-2">
+                            <i class="fa-solid fa-bars text-2xl" id="menuIcon"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation Drawer -->
+            <div class="lg:hidden hidden bg-brand-darkGray border-t border-gray-800 transition-all duration-300 px-4 pt-3 pb-6 space-y-3" id="mobileMenu">
+                <a href="#home" onclick="toggleMobileMenu()" class="block py-2 text-brand-red font-semibold border-b border-gray-800">Home</a>
+                <a href="#founder" onclick="toggleMobileMenu()" class="block py-2 text-gray-300 hover:text-brand-red border-b border-gray-800">Founder's Bio</a>
+                <a href="#pillars" onclick="toggleMobileMenu()" class="block py-2 text-gray-300 hover:text-brand-red border-b border-gray-800">Core Pillars</a>
+                <a href="#impact" onclick="toggleMobileMenu()" class="block py-2 text-gray-300 hover:text-brand-red border-b border-gray-800">Impact Gallery</a>
+                <a href="#testimonials" onclick="toggleMobileMenu()" class="block py-2 text-gray-300 hover:text-brand-red border-b border-gray-800">Stories of Hope</a>
+                <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 text-gray-300 hover:text-brand-red border-b border-gray-800">Contact Us</a>
+                <div class="pt-2">
+                    <button onclick="toggleMobileMenu(); openDonateModal();" class="w-full bg-brand-red hover:bg-brand-redDark text-white font-bold py-3 rounded-lg shadow transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-heart"></i> Make a Donation
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative min-h-screen pt-32 pb-20 flex items-center bg-brand-black text-white overflow-hidden">
+        <!-- Background Overlay Image -->
+        <div class="absolute inset-0 z-0 opacity-30 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1600&auto=format&fit=crop');"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/80 to-transparent z-0"></div>
+        
+        <!-- Ambient Decorative Glowing Orbs -->
+        <div class="absolute top-1/4 -left-20 w-96 h-96 bg-brand-red/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 right-0 w-80 h-80 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-red/10 border border-brand-red/30 text-brand-red text-xs sm:text-sm font-semibold uppercase tracking-widest">
+                        <i class="fa-solid fa-hand-holding-heart"></i>
+                        <span>Humanitarian & Community Crusader</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight">
+                        Touching Lives, Healing Hearts & <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-red via-orange-400 to-brand-gold">Empowering Communities</span>
+                    </h1>
+
+                    <p class="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
+                        Under the visionary leadership of <strong>Chief Dr. Damian Chirote Odo Messiah N' Nsukka</strong>, we are committed to uplifting the underprivileged, funding scholarships, clearing hospital bills, and empowering youths for a sustainable future.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+                        <button onclick="openDonateModal()" class="bg-gradient-to-r from-brand-red to-red-600 hover:from-red-600 hover:to-brand-red text-white font-bold px-8 py-4 rounded-xl shadow-xl hover:shadow-brand-red/40 transition transform hover:-translate-y-1 flex items-center justify-center gap-3 text-base">
+                            <i class="fa-solid fa-heart text-lg"></i>
+                            <span>Support Our Cause</span>
+                        </button>
+                        <a href="#founder" class="border border-gray-600 hover:border-brand-red bg-white/5 hover:bg-white/10 text-white font-semibold px-8 py-4 rounded-xl transition flex items-center justify-center gap-2 text-base">
+                            <span>Read Founder's Story</span>
+                            <i class="fa-solid fa-arrow-right text-sm text-brand-red"></i>
+                        </a>
+                    </div>
+
+                    <!-- Highlight Badges -->
+                    <div class="grid grid-cols-3 gap-4 pt-8 border-t border-gray-800 text-center lg:text-left">
+                        <div>
+                            <span class="block text-2xl sm:text-3xl font-bold font-serif text-brand-red">100%</span>
+                            <span class="text-xs text-gray-400 uppercase tracking-wider">Free Scholarships</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl sm:text-3xl font-bold font-serif text-brand-gold">5,000+</span>
+                            <span class="text-xs text-gray-400 uppercase tracking-wider">Lives Touched</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl sm:text-3xl font-bold font-serif text-white">300+</span>
+                            <span class="text-xs text-gray-400 uppercase tracking-wider">Hospital Bills Paid</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Graphic / Founder Preview Badge -->
+                <div class="lg:col-span-5 relative flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <!-- Frame Border Accent -->
+                        <div class="absolute -inset-2 rounded-2xl bg-gradient-to-r from-brand-red to-brand-gold opacity-50 blur-lg"></div>
+                        <div class="relative rounded-2xl bg-brand-darkGray border border-gray-700 p-3 shadow-2xl overflow-hidden">
+                            <img src="./WhatsApp Image 2026-09-21 at 14.05.21.jpeg" alt="Chief Dr. Damian Chirote Odo Messiah N' Nsukka" class="w-full h-96 object-cover rounded-xl filter contrast-105">
+                            
+                            <div class="absolute bottom-6 left-6 right-6 bg-brand-black/90 backdrop-blur-md p-4 rounded-xl border border-white/10 text-white">
+                                <p class="text-xs font-semibold uppercase text-brand-gold tracking-widest">Icon of Compassion</p>
+                                <h3 class="font-serif font-bold text-lg text-white">Chief Dr. Damian Chirote Odo</h3>
+                                <p class="text-xs text-gray-300 mt-1 italic">"No one has ever become poor by giving."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOUNDER BIOGRAPHY SECTION -->
+    <section id="founder" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-red font-bold text-xs uppercase tracking-widest block mb-2">The Visionary Behind the Movement</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-black">Meet Our Esteemed Founder</h2>
+                <div class="w-20 h-1 bg-brand-red mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Founder Portrait & Badges -->
+                <div class="lg:col-span-5">
+                    <div class="relative">
+                        <!-- Background Glow -->
+                        <div class="absolute -top-4 -left-4 w-full h-full border-2 border-brand-red rounded-2xl"></div>
+                        
+                        <div class="relative rounded-2xl overflow-hidden shadow-2xl bg-brand-black">
+                            <img src="./Dr Damian.jpeg" alt="Chief Dr. Damian Chirote Odo Messiah N' Nsukka Portrait" class="w-full h-[500px] object-cover object-top hover:scale-105 transition duration-500">
+                            
+                            <div class="p-6 bg-gradient-to-t from-brand-black via-brand-black/90 to-transparent text-white">
+                                <h3 class="text-2xl font-serif font-bold text-white">Chief Dr. Damian Chirote Odo</h3>
+                                <p class="text-brand-gold text-sm font-medium">Messiah N' Nsukka</p>
+                                <p class="text-gray-300 text-xs mt-2">Philanthropist • Community Leader • Youth Advocate</p>
+                            </div>
+                        </div>
+
+                        <!-- Floating Honor Badge -->
+                        <div class="absolute -bottom-6 -right-6 bg-brand-black text-white p-4 rounded-xl shadow-xl border border-brand-gold hidden sm:flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full bg-brand-gold/20 flex items-center justify-center text-brand-gold text-2xl">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <div>
+                                <span class="block text-sm font-bold">Philanthropist of the Decade</span>
+                                <span class="text-xs text-gray-400">Honored for Excellence in Humanity</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Biography Text Content -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="border-l-4 border-brand-red pl-4">
+                        <h3 class="text-2xl sm:text-3xl font-serif font-bold text-brand-black">
+                            A Lifetime Dedicated to Elevating Humanity & Restoring Dignity
+                        </h3>
+                    </div>
+
+                    <p class="text-gray-600 leading-relaxed text-base">
+                        <strong>Chief Dr. Damian Chirote Odo (Messiah N' Nsukka)</strong> is a beacon of hope, an advocate for the vulnerable, and a transformational leader whose philanthropic endeavors have reshaped thousands of lives across Nsukka and beyond.
+                    </p>
+
+                    <p class="text-gray-600 leading-relaxed text-base">
+                        Born with a deep-seated empathy for the suffering, Chief Dr. Damian Odo recognized early that sustainable community development begins with individual empowerment. Driven by this conviction, he established the foundation to address core societal challenges: poverty, lack of educational access, health crises, and youth unemployment.
+                    </p>
+
+                    <!-- Key Accomplishments Highlights -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 py-4">
+                        <div class="flex items-start gap-3 p-3 rounded-lg bg-gray-50 border border-gray-100">
+                            <i class="fa-solid fa-graduation-cap text-brand-red text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-sm text-brand-black">Scholarship Scheme</h4>
+                                <p class="text-xs text-gray-500">Fully funding primary, secondary, and tertiary education for underprivileged students.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3 p-3 rounded-lg bg-gray-50 border border-gray-100">
+                            <i class="fa-solid fa-notes-medical text-brand-red text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-sm text-brand-black">Hospital Relief Fund</h4>
+                                <p class="text-xs text-gray-500">Directly clearing medical bills for stranded patients in hospitals.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3 p-3 rounded-lg bg-gray-50 border border-gray-100">
+                            <i class="fa-solid fa-wheelchair text-brand-red text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-sm text-brand-black">Disability Support</h4>
+                                <p class="text-xs text-gray-500">Providing mobility aids, financial grants, and inclusive welfare packages.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3 p-3 rounded-lg bg-gray-50 border border-gray-100">
+                            <i class="fa-solid fa-seedling text-brand-red text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-sm text-brand-black">Youth Empowerment</h4>
+                                <p class="text-xs text-gray-500">Vocational training, business seed capital, and mentorship initiatives.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-4 bg-brand-black text-white rounded-xl border-l-4 border-brand-gold italic text-sm">
+                        "God has blessed us not to build higher walls, but to build longer tables. When we heal the sick, educate the poor, and uplift our youth, we secure the future of our entire society."
+                        <span class="block font-bold text-brand-gold not-italic mt-2 text-right">— Chief Dr. Damian Chirote Odo</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CORE PILLARS OF IMPACT -->
+    <section id="pillars" class="py-24 bg-brand-black text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-red font-bold text-xs uppercase tracking-widest block mb-2">Our Areas of Focus</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white">The Core Pillars of Our NGO</h2>
+                <p class="text-gray-400 mt-3 text-sm">Targeted intervention programs designed to deliver lasting social transformation.</p>
+                <div class="w-20 h-1 bg-brand-red mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Pillar 1 -->
+                <div class="bg-brand-darkGray border border-gray-800 rounded-2xl p-8 hover:border-brand-red transition duration-300 group hover:-translate-y-2">
+                    <div class="w-16 h-16 rounded-2xl bg-brand-red/10 text-brand-red flex items-center justify-center text-3xl mb-6 group-hover:bg-brand-red group-hover:text-white transition duration-300">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-white mb-3">Educational Scholarships</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                        Ensuring no brilliant child is left behind due to financial handicap. We cover full tuition, books, and accommodation for students in need.
+                    </p>
+                    <a href="#contact" class="inline-flex items-center text-xs font-bold text-brand-gold hover:text-brand-red transition gap-2">
+                        <span>Learn How We Support Students</span>
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="bg-brand-darkGray border border-gray-800 rounded-2xl p-8 hover:border-brand-red transition duration-300 group hover:-translate-y-2">
+                    <div class="w-16 h-16 rounded-2xl bg-brand-red/10 text-brand-red flex items-center justify-center text-3xl mb-6 group-hover:bg-brand-red group-hover:text-white transition duration-300">
+                        <i class="fa-solid fa-hospital-user"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-white mb-3">Medical Aid & Bill Settlement</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                        Visiting hospitals to pay accumulated medical bills for low-income patients, emergency surgeries, and donating medical supplies.
+                    </p>
+                    <a href="#contact" class="inline-flex items-center text-xs font-bold text-brand-gold hover:text-brand-red transition gap-2">
+                        <span>Request Hospital Relief</span>
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="bg-brand-darkGray border border-gray-800 rounded-2xl p-8 hover:border-brand-red transition duration-300 group hover:-translate-y-2">
+                    <div class="w-16 h-16 rounded-2xl bg-brand-red/10 text-brand-red flex items-center justify-center text-3xl mb-6 group-hover:bg-brand-red group-hover:text-white transition duration-300">
+                        <i class="fa-solid fa-wheelchair"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-white mb-3">Support for Disabled & Less Privileged</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                        Distributing wheelchairs, prosthetic aids, monthly stipends, and food palliatives to persons living with disabilities and vulnerable widows.
+                    </p>
+                    <a href="#contact" class="inline-flex items-center text-xs font-bold text-brand-gold hover:text-brand-red transition gap-2">
+                        <span>Welfare Initiatives</span>
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Pillar 4 -->
+                <div class="bg-brand-darkGray border border-gray-800 rounded-2xl p-8 hover:border-brand-red transition duration-300 group hover:-translate-y-2">
+                    <div class="w-16 h-16 rounded-2xl bg-brand-red/10 text-brand-red flex items-center justify-center text-3xl mb-6 group-hover:bg-brand-red group-hover:text-white transition duration-300">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-white mb-3">Youth Empowerment & Skills</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                        Providing vocational training in tech, trades, agriculture, along with start-up grants and equipment to help youths become self-reliant.
+                    </p>
+                    <a href="#contact" class="inline-flex items-center text-xs font-bold text-brand-gold hover:text-brand-red transition gap-2">
+                        <span>Apply for Youth Grants</span>
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Pillar 5 -->
+                <div class="bg-brand-darkGray border border-gray-800 rounded-2xl p-8 hover:border-brand-red transition duration-300 group hover:-translate-y-2">
+                    <div class="w-16 h-16 rounded-2xl bg-brand-red/10 text-brand-red flex items-center justify-center text-3xl mb-6 group-hover:bg-brand-red group-hover:text-white transition duration-300">
+                        <i class="fa-solid fa-city"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-white mb-3">Community Infrastructure</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                        Drilling clean water boreholes, renovating rural schools, electrifying rural roads, and building community health posts in Nsukka.
+                    </p>
+                    <a href="#contact" class="inline-flex items-center text-xs font-bold text-brand-gold hover:text-brand-red transition gap-2">
+                        <span>Community Projects</span>
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Pillar 6 -->
+                <div class="bg-brand-darkGray border border-gray-800 rounded-2xl p-8 hover:border-brand-red transition duration-300 group hover:-translate-y-2">
+                    <div class="w-16 h-16 rounded-2xl bg-brand-red/10 text-brand-red flex items-center justify-center text-3xl mb-6 group-hover:bg-brand-red group-hover:text-white transition duration-300">
+                        <i class="fa-solid fa-people-roof"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-white mb-3">Emergency & Relief Care</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                        Rapid response assistance for families facing sudden crises, fire disaster victims, and homeless individuals needing shelter.
+                    </p>
+                    <a href="#contact" class="inline-flex items-center text-xs font-bold text-brand-gold hover:text-brand-red transition gap-2">
+                        <span>Emergency Assistance</span>
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- IMPACT GALLERY SECTION -->
+    <section id="impact" class="py-24 bg-gray-50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-brand-red font-bold text-xs uppercase tracking-widest block mb-2">Evidence of Service</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-black">Impact Gallery & Fieldwork</h2>
+                <p class="text-gray-600 mt-2 text-sm">Glimpse our active outreach programs across various communities.</p>
+                <div class="w-20 h-1 bg-brand-red mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Gallery Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-2 mb-10">
+                <button onclick="filterGallery('all')" class="gallery-btn active bg-brand-black text-white px-5 py-2 rounded-full text-xs font-bold transition">All Projects</button>
+                <button onclick="filterGallery('scholarship')" class="gallery-btn bg-white text-gray-700 hover:bg-brand-red hover:text-white border border-gray-200 px-5 py-2 rounded-full text-xs font-bold transition">Scholarships</button>
+                <button onclick="filterGallery('medical')" class="gallery-btn bg-white text-gray-700 hover:bg-brand-red hover:text-white border border-gray-200 px-5 py-2 rounded-full text-xs font-bold transition">Medical Aid</button>
+                <button onclick="filterGallery('empowerment')" class="gallery-btn bg-white text-gray-700 hover:bg-brand-red hover:text-white border border-gray-200 px-5 py-2 rounded-full text-xs font-bold transition">Youth Empowerment</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="galleryGrid">
+                
+                <!-- Item 1 -->
+                <div class="gallery-item scholarship rounded-2xl overflow-hidden bg-white shadow-md border border-gray-100 group">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="./cheque 2.jpeg" alt="Scholarship Handover" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
+                            <span class="text-brand-gold text-xs font-bold uppercase"><i class="fa-solid fa-graduation-cap mr-1"></i> Scholarship Handover</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-brand-black text-base">Annual Tertiary Scholarship Award</h4>
+                        <p class="text-xs text-gray-500 mt-1">Awarding 150 university students tuition fee grants in Nsukka.</p>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="gallery-item medical rounded-2xl overflow-hidden bg-white shadow-md border border-gray-100 group">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?q=80&w=800&auto=format&fit=crop" alt="Hospital Visit" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
+                            <span class="text-brand-gold text-xs font-bold uppercase"><i class="fa-solid fa-notes-medical mr-1"></i> Medical Outreach</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-brand-black text-base">Hospital Bill Offsetting Drive</h4>
+                        <p class="text-xs text-gray-500 mt-1">Clearing surgical and medical treatment bills at local hospitals.</p>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="gallery-item empowerment rounded-2xl overflow-hidden bg-white shadow-md border border-gray-100 group">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="./empowerment.jpeg" alt="Youth Skill Training" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
+                            <span class="text-brand-gold text-xs font-bold uppercase"><i class="fa-solid fa-laptop-code mr-1"></i> Tech & Skills</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-brand-black text-base">Youth Skill Acquisition Bootcamp</h4>
+                        <p class="text-xs text-gray-500 mt-1">Empowering 200 young adults with digital and vocational equipment.</p>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="gallery-item empowerment rounded-2xl overflow-hidden bg-white shadow-md border border-gray-100 group">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=800&auto=format&fit=crop" alt="Disability Relief Aid" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
+                            <span class="text-brand-gold text-xs font-bold uppercase"><i class="fa-solid fa-wheelchair mr-1"></i> Disability Aid</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-brand-black text-base">Mobility Aid Distribution</h4>
+                        <p class="text-xs text-gray-500 mt-1">Donating wheelchairs, tricycles, and business seed grants.</p>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="gallery-item scholarship rounded-2xl overflow-hidden bg-white shadow-md border border-gray-100 group">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="./jamb.jpeg" alt="Basic School Support" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
+                            <span class="text-brand-gold text-xs font-bold uppercase"><i class="fa-solid fa-book-open mr-1"></i> Primary Education</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-brand-black text-base">Free Jamb Registration</h4>
+                        <p class="text-xs text-gray-500 mt-1">Enabling qualified students to register for the Joint Admissions and Matriculation Board examination.</p>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="gallery-item medical rounded-2xl overflow-hidden bg-white shadow-md border border-gray-100 group">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://i.pinimg.com/1200x/37/5c/7d/375c7d38407acf70eaa5341c87b1d582.jpg" alt="Community Water Project" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
+                            <span class="text-brand-gold text-xs font-bold uppercase"><i class="fa-solid fa-faucet-drip mr-1"></i> Water Infrastructure</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-brand-black text-base">Clean Borehole Water Commissioning</h4>
+                        <p class="text-xs text-gray-500 mt-1">Providing safe drinking water for rural villages.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS / TESTIMONIES OF HOPE -->
+    <section id="testimonials" class="py-24 bg-brand-black text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-red font-bold text-xs uppercase tracking-widest block mb-2">Voices of Gratitude</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white">Stories of Changed Lives</h2>
+                <p class="text-gray-400 mt-2 text-sm">Real impact on real human beings in our communities.</p>
+                <div class="w-20 h-1 bg-brand-red mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Testimonial 1 -->
+                <div class="bg-brand-darkGray border border-gray-800 p-6 rounded-2xl relative flex flex-col justify-between">
+                    <div class="text-brand-gold text-3xl mb-4"><i class="fa-solid fa-quote-left"></i></div>
+                    <p class="text-gray-300 text-sm leading-relaxed italic mb-6">
+                        "I had lost all hope of writing my final university exams because of my unpaid school fees. Chief Dr. Damian Odo stepped in and cleared my entire tuition fees. Today, I am a proud graduate!"
+                    </p>
+                    <div class="flex items-center gap-3 pt-4 border-t border-gray-800">
+                        <div class="w-10 h-10 rounded-full bg-brand-red flex items-center justify-center font-bold text-white text-sm">
+                            CO
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-sm text-white">Chinedu O.</h5>
+                            <span class="text-xs text-brand-gold">Scholarship Beneficiary</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-brand-darkGray border border-gray-800 p-6 rounded-2xl relative flex flex-col justify-between">
+                    <div class="text-brand-gold text-3xl mb-4"><i class="fa-solid fa-quote-left"></i></div>
+                    <p class="text-gray-300 text-sm leading-relaxed italic mb-6">
+                        "When my daughter needed urgent surgery, the hospital detained us because we couldn't pay. Chief Dr. Damian visited the hospital and paid our complete bill. May God bless Messiah N' Nsukka!"
+                    </p>
+                    <div class="flex items-center gap-3 pt-4 border-t border-gray-800">
+                        <div class="w-10 h-10 rounded-full bg-brand-red flex items-center justify-center font-bold text-white text-sm">
+                            MN
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-sm text-white">Mrs. Nkechi E.</h5>
+                            <span class="text-xs text-brand-gold">Medical Relief Beneficiary</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-brand-darkGray border border-gray-800 p-6 rounded-2xl relative flex flex-col justify-between">
+                    <div class="text-brand-gold text-3xl mb-4"><i class="fa-solid fa-quote-left"></i></div>
+                    <p class="text-gray-300 text-sm leading-relaxed italic mb-6">
+                        "Being physically challenged, finding employment was tough. Through the foundation's empowerment grant, I received a tricycle and starting capital for my grocery shop."
+                    </p>
+                    <div class="flex items-center gap-3 pt-4 border-t border-gray-800">
+                        <div class="w-10 h-10 rounded-full bg-brand-red flex items-center justify-center font-bold text-white text-sm">
+                            SU
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-sm text-white">Sunday U.</h5>
+                            <span class="text-xs text-brand-gold">Empowerment Recipient</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT US SECTION -->
+    <section id="contact" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Information Card -->
+                <div class="lg:col-span-5 bg-brand-black text-white p-8 sm:p-10 rounded-3xl relative overflow-hidden flex flex-col justify-between">
+                    <!-- Accent Orb -->
+                    <div class="absolute -right-10 -top-10 w-40 h-40 bg-brand-red/30 rounded-full blur-2xl"></div>
+
+                    <div>
+                        <span class="text-brand-gold font-bold text-xs uppercase tracking-widest block mb-2">Get in Touch</span>
+                        <h3 class="text-3xl font-serif font-bold text-white mb-6">We Are Here to Serve</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-8">
+                            Whether you need assistance, wish to partner with Chief Dr. Damian Odo Messiah N' Nsukka Foundation, or want to make inquiries, feel free to reach out.
+                        </p>
+
+                        <div class="space-y-6 text-sm">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-brand-red/20 text-brand-red flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold text-white">Head Office Address</h5>
+                                    <p class="text-gray-400 text-xs mt-0.5">Messiah Plaza, Nsukka, Enugu State, Nigeria</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-brand-red/20 text-brand-red flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold text-white">Phone & WhatsApp</h5>
+                                    <p class="text-gray-400 text-xs mt-0.5">+234 (0) 800 6377 424 / +234 (0) 812 3456 789</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-brand-red/20 text-brand-red flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold text-white">Email Address</h5>
+                                    <p class="text-gray-400 text-xs mt-0.5">contact@messiahfoundation.org</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media Links -->
+                    <div class="pt-8 mt-8 border-t border-gray-800">
+                        <span class="block text-xs text-gray-400 mb-3">Connect on Social Media</span>
+                        <div class="flex space-x-3">
+                            <a href="#" class="w-9 h-9 rounded-full bg-gray-800 hover:bg-brand-red text-white flex items-center justify-center transition"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="w-9 h-9 rounded-full bg-gray-800 hover:bg-brand-red text-white flex items-center justify-center transition"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#" class="w-9 h-9 rounded-full bg-gray-800 hover:bg-brand-red text-white flex items-center justify-center transition"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="w-9 h-9 rounded-full bg-gray-800 hover:bg-brand-red text-white flex items-center justify-center transition"><i class="fa-brands fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Message Form -->
+                <div class="lg:col-span-7 bg-gray-50 p-8 sm:p-10 rounded-3xl border border-gray-200">
+                    <h3 class="text-2xl font-serif font-bold text-brand-black mb-2">Send Us a Direct Message</h3>
+                    <p class="text-gray-500 text-xs mb-6">Fill out the form below and our team will respond swiftly.</p>
+
+                    <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Full Name *</label>
+                                <input type="text" required placeholder="e.g. Emmanuel Okeke" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:border-brand-red text-sm transition">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Email Address *</label>
+                                <input type="email" required placeholder="e.g. emmanuel@example.com" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:border-brand-red text-sm transition">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Phone Number</label>
+                                <input type="tel" placeholder="+234 800 000 0000" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:border-brand-red text-sm transition">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Inquiry Purpose</label>
+                                <select class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:border-brand-red text-sm transition bg-white">
+                                    <option>Scholarship Application</option>
+                                    <option>Medical Assistance Request</option>
+                                    <option>Youth Skill Grant</option>
+                                    <option>Partnership / Donation Inquiry</option>
+                                    <option>General Message</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Your Message *</label>
+                            <textarea rows="4" required placeholder="How can Chief Dr. Damian Odo Foundation assist you?" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:border-brand-red text-sm transition"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-brand-red hover:bg-brand-redDark text-white font-bold py-3.5 rounded-xl shadow-lg transition duration-300 flex items-center justify-center gap-2 text-sm">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>Send Message</span>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- DONATION MODAL -->
+    <div id="donateModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm hidden p-4 transition-all duration-300">
+        <div class="bg-white rounded-3xl max-w-lg w-full overflow-hidden shadow-2xl transform transition-all">
+            
+            <!-- Modal Header -->
+            <div class="bg-brand-black text-white p-6 relative">
+                <button onclick="closeDonateModal()" class="absolute top-5 right-5 text-gray-400 hover:text-white text-xl focus:outline-none">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <span class="text-brand-gold text-xs font-bold uppercase tracking-widest">Support Humanity</span>
+                <h3 class="text-xl font-serif font-bold text-white mt-1">Make a Donation</h3>
+                <p class="text-gray-400 text-xs mt-1">Your generosity changes lives directly in our local communities.</p>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="p-6 space-y-5">
+                <!-- Select Cause -->
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 uppercase mb-2">Select Impact Cause</label>
+                    <select class="w-full p-3 rounded-xl border border-gray-300 text-sm focus:border-brand-red outline-none">
+                        <option>General Humanitarian Fund</option>
+                        <option>Educational Scholarship Fund</option>
+                        <option>Hospital Bill Settlement Drive</option>
+                        <option>Disability Relief & Wheelchairs</option>
+                    </select>
+                </div>
+
+                <!-- Select Amount -->
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 uppercase mb-2">Select Donation Amount (NGN)</label>
+                    <div class="grid grid-cols-3 gap-2 mb-2">
+                        <button type="button" onclick="setAmount(5000, this)" class="amount-btn border border-gray-300 rounded-lg py-2 text-xs font-bold hover:border-brand-red transition">₦5,000</button>
+                        <button type="button" onclick="setAmount(20000, this)" class="amount-btn border border-gray-300 rounded-lg py-2 text-xs font-bold hover:border-brand-red transition border-brand-red text-brand-red bg-red-50">₦20,000</button>
+                        <button type="button" onclick="setAmount(50000, this)" class="amount-btn border border-gray-300 rounded-lg py-2 text-xs font-bold hover:border-brand-red transition">₦50,000</button>
+                    </div>
+                    <input type="number" id="customAmount" placeholder="Or enter custom amount in ₦" class="w-full p-3 rounded-xl border border-gray-300 text-sm focus:border-brand-red outline-none">
+                </div>
+
+                <!-- Payment Details Display -->
+                <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 space-y-2">
+                    <h4 class="font-bold text-xs text-brand-black uppercase">Direct Bank Transfer Details:</h4>
+                    <div class="flex justify-between text-xs">
+                        <span class="text-gray-500">Bank Name:</span>
+                        <span class="font-bold text-brand-black">First Bank of Nigeria</span>
+                    </div>
+                    <div class="flex justify-between text-xs">
+                        <span class="text-gray-500">Account Name:</span>
+                        <span class="font-bold text-brand-black">Chief Dr. Damian Odo Foundation</span>
+                    </div>
+                    <div class="flex justify-between text-xs">
+                        <span class="text-gray-500">Account Number:</span>
+                        <span class="font-bold text-brand-red font-mono text-sm">3089482012</span>
+                    </div>
+                </div>
+
+                <button onclick="processDonation()" class="w-full bg-brand-red hover:bg-brand-redDark text-white font-bold py-3.5 rounded-xl shadow-lg transition duration-300 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-lock"></i>
+                    <span>Confirm & Donate</span>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION CONTAINER -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 bg-brand-black text-white border-l-4 border-brand-red px-6 py-4 rounded-xl shadow-2xl transform translate-y-32 opacity-0 transition-all duration-300 flex items-center gap-3">
+        <i class="fa-solid fa-circle-check text-brand-gold text-xl"></i>
+        <div>
+            <h5 class="font-bold text-sm" id="toastTitle">Success</h5>
+            <p class="text-xs text-gray-300" id="toastMessage">Action completed successfully.</p>
+        </div>
+    </div>
+
+    <!-- BACK TO TOP BUTTON -->
+    <button id="backToTop" onclick="scrollToTop()" class="fixed bottom-6 left-6 z-40 bg-brand-red text-white w-12 h-12 rounded-full shadow-2xl flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 hover:bg-brand-redDark">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-black text-white pt-16 pb-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-gray-800">
+                
+                <!-- Col 1: Foundation Info -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-brand-red flex items-center justify-center font-serif font-bold text-white">
+                            DM
+                        </div>
+                        <span class="font-serif font-bold text-sm text-white">
+                            Chief Dr. Damian Odo Messiah N' Nsukka Foundation
+                        </span>
+                    </div>
+                    <p class="text-gray-400 text-xs leading-relaxed">
+                        Dedicated to serving the less privileged, providing education through scholarships, paying medical bills, and empowering youths for community advancement.
+                    </p>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div>
+                    <h4 class="font-serif font-bold text-sm text-brand-gold uppercase tracking-wider mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li><a href="#home" class="hover:text-brand-red transition">Home</a></li>
+                        <li><a href="#founder" class="hover:text-brand-red transition">Founder's Biography</a></li>
+                        <li><a href="#pillars" class="hover:text-brand-red transition">Core Focus Areas</a></li>
+                        <li><a href="#impact" class="hover:text-brand-red transition">Fieldwork Gallery</a></li>
+                        <li><a href="#contact" class="hover:text-brand-red transition">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Impact Pillars -->
+                <div>
+                    <h4 class="font-serif font-bold text-sm text-brand-gold uppercase tracking-wider mb-4">What We Do</h4>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li>Youth Skills & Capital</li>
+                        <li>Academic Scholarships</li>
+                        <li>Hospital Bill Assistance</li>
+                        <li>Disability Welfare Palliatives</li>
+                        <li>Nsukka Community Projects</li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Newsletter -->
+                <div>
+                    <h4 class="font-serif font-bold text-sm text-brand-gold uppercase tracking-wider mb-4">Newsletter Signup</h4>
+                    <p class="text-xs text-gray-400 mb-3">Stay updated on our latest outreach programs.</p>
+                    <form onsubmit="handleNewsletter(event)" class="space-y-2">
+                        <input type="email" required placeholder="Enter your email" class="w-full px-3 py-2 bg-brand-darkGray border border-gray-700 rounded-lg text-xs text-white focus:outline-none focus:border-brand-red">
+                        <button type="submit" class="w-full bg-brand-red hover:bg-brand-redDark text-white font-bold py-2 rounded-lg text-xs transition">Subscribe</button>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright -->
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500">
+                <p>© 2026 Chief Dr. Damian Chirote Odo Messiah N' Nsukka Foundation. All Rights Reserved.</p>
+                <p class="mt-2 sm:mt-0">Service to Humanity & Honor to God</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT LOGIC -->
+    <script>
+        // Smooth Preloader Fadeout
+        window.addEventListener('load', function() {
+            const preloader = document.getElementById('preloader');
+            setTimeout(() => {
+                preloader.style.opacity = '0';
+                preloader.style.visibility = 'hidden';
+            }, 600);
+        });
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const icon = document.getElementById('menuIcon');
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                icon.className = 'fa-solid fa-bars text-2xl';
+            } else {
+                icon.className = 'fa-solid fa-xmark text-2xl';
+            }
+        }
+
+        // Header Background Scroll Effect & Back-To-Top Button
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('navbar');
+            const backToTopBtn = document.getElementById('backToTop');
+            
+            if (window.scrollY > 100) {
+                header.classList.add('shadow-xl', 'bg-brand-black');
+                backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+            } else {
+                header.classList.remove('shadow-xl');
+                backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Gallery Filter Logic
+        function filterGallery(category) {
+            const buttons = document.querySelectorAll('.gallery-btn');
+            const items = document.querySelectorAll('.gallery-item');
+
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-brand-black', 'text-white');
+                btn.classList.add('bg-white', 'text-gray-700');
+            });
+            event.target.classList.remove('bg-white', 'text-gray-700');
+            event.target.classList.add('bg-brand-black', 'text-white');
+
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Donation Modal Logic
+        function openDonateModal() {
+            document.getElementById('donateModal').classList.remove('hidden');
+        }
+
+        function closeDonateModal() {
+            document.getElementById('donateModal').classList.add('hidden');
+        }
+
+        function setAmount(amount, element) {
+            document.getElementById('customAmount').value = amount;
+            const buttons = document.querySelectorAll('.amount-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('border-brand-red', 'text-brand-red', 'bg-red-50');
+            });
+            element.classList.add('border-brand-red', 'text-brand-red', 'bg-red-50');
+        }
+
+        function processDonation() {
+            closeDonateModal();
+            showToast('Thank You!', 'Your support request has been generated. Use bank details to complete transfer.');
+        }
+
+        // Contact Form Handling
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            event.target.reset();
+            showToast('Message Sent!', 'Thank you. Chief Dr. Damian Odo Foundation team will get back to you shortly.');
+        }
+
+        // Newsletter Handling
+        function handleNewsletter(event) {
+            event.preventDefault();
+            event.target.reset();
+            showToast('Subscribed!', 'You have successfully subscribed to our newsletter.');
+        }
+
+        // Toast Notification System
+        function showToast(title, message) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastTitle').innerText = title;
+            document.getElementById('toastMessage').innerText = message;
+
+            toast.classList.remove('translate-y-32', 'opacity-0');
+            
+            setTimeout(() => {
+                toast.classList.add('translate-y-32', 'opacity-0');
+            }, 4000);
+        }
+    </script>
+</body>
+</html>
